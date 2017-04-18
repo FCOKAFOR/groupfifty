@@ -1,0 +1,315 @@
+                                                                            body {
+                                                                            height: 100%;
+                                                                            width: auto;
+                                                                            margin: 0;
+                                                                        }
+
+                                                                        #background {
+                                                                            background-image: url(images/OfficeFINISHED.png);
+                                                                            background-color: cadetblue;
+                                                                            background-blend-mode: multiply;
+                                                                            background-repeat: no-repeat;
+                                                                            background-position: center;
+                                                                            background-size: cover;
+                                                                            height: 100vh;
+                                                                            overflow: hidden;
+                                                                        }
+
+                                                                        #background2 {
+                                                                            background-color: black;
+                                                                            height: 100vh;
+                                                                            width: 100vw;
+                                                                            display: none;
+                                                                        }
+
+                                                                        #background2 button {
+                                                                            color: white;
+                                                                            background-color: grey;
+                                                                        }
+
+                                                                        #background3 {
+                                                                            background-image: url(images/el1FINISHED.jpg);
+                                                                            background-color: lightgrey;
+                                                                            background-blend-mode: multiply;
+                                                                            background-repeat: no-repeat;
+                                                                            background-position: center;
+                                                                            background-size: cover;
+                                                                            position: relative;
+                                                                            height: 100vh;
+                                                                            width: auto;
+                                                                            overflow: hidden;
+                                                                        }
+
+                                                                        #background4 {
+                                                                            background-image: url(images/el2FINISHED.jpg);
+                                                                            background-color: lightgrey;
+                                                                            background-blend-mode: multiply;
+                                                                            background-repeat: no-repeat;
+                                                                            background-position: center;
+                                                                            background-size: cover;
+                                                                            position: relative;
+                                                                            height: 100vh;
+                                                                            width: auto;
+                                                                        }
+
+                                                                        #background5 {
+                                                                            background-image: url(images/el3FINISHED.jpg);
+                                                                            background-color: lightgrey;
+                                                                            background-blend-mode: multiply;
+                                                                            background-repeat: no-repeat;
+                                                                            background-position: center;
+                                                                            background-size: cover;
+                                                                            position: relative;
+                                                                            height: 100vh;
+                                                                            width: auto;
+                                                                        }
+
+                                                                        .enterElevator {
+                                                                            animation: enterElevator 0.8s forwards;
+                                                                        }
+
+                                                                        @keyframes enterElevator {
+                                                                            0% {
+                                                                                bottom: 10px;
+                                                                            }
+                                                                            100% {
+                                                                                bottom: 200px;
+                                                                            }
+                                                                        }
+
+                                                                        #cat {
+                                                                            position: absolute;
+                                                                            width: 100px;
+                                                                            bottom: 10px;
+                                                                            left: 40%;
+                                                                            display: none;
+                                                                        }
+
+                                                                        #greyBack {
+                                                                            position: absolute;
+                                                                            bottom: 10px;
+                                                                            width: 100px;
+                                                                            left: 50%;
+                                                                            display: none;
+                                                                        }
+
+                                                                        #background6 {
+                                                                            background-image: url(images/DiningRoomFINISHED.jpg);
+                                                                            background-blend-mode: multiply;
+                                                                            background-repeat: no-repeat;
+                                                                            background-position: center;
+                                                                            background-size: cover;
+                                                                            height: 100vh;
+                                                                            width: 100vw;
+                                                                            display: none;
+                                                                            position: relative;
+                                                                        }
+
+                                                                        #background7 {
+                                                                            background-image: url(images/insideElFINISHED.jpg);
+                                                                            background-blend-mode: multiply;
+                                                                            background-repeat: no-repeat;
+                                                                            background-position: center;
+                                                                            background-size: cover;
+                                                                            height: 100vh;
+                                                                            width: 100vw;
+                                                                            display: none;
+                                                                            position: absolute;
+                                                                        }
+
+                                                                        elContainer {}
+
+                                                                        #door1 {
+                                                                            position: relative;
+                                                                            left: -50%;
+                                                                             height:800px;
+                                                                            width:50%;
+
+                                                                        }
+
+                                                                        .door1Close {
+                                                                            animation: door1Close 2s ease-out forwards;
+                                                                        }
+
+                                                                        @keyframes door1Close {
+                                                                            0% {
+                                                                                left: -50%;
+                                                                            }
+                                                                            100% {
+                                                                                left: 0%;
+                                                                            }
+                                                                        }
+
+                                                                        #door2 {
+                                                                           float:right;
+                                                                            position: relative;
+                                                                            right: -50%;
+                                                                            height:800px;
+                                                                            width:50%;
+
+                                                                        }
+
+                                                                        .door2Close {
+                                                                            animation: door2Close 2s ease-out forwards;
+                                                                        }
+
+                                                                        @keyframes door2Close {
+                                                                            0% {
+                                                                                right: -50%;
+                                                                            }
+                                                                            100% {
+                                                                                right: 0%;
+                                                                            }
+                                                                        }
+
+                                                                        #anaInElevator {
+                                                                            height: 400px;
+                                                                            width: auto;
+                                                                            margin-left: 300px;
+                                                                        }
+
+                                                                        #greyInElevator {
+                                                                            height: 500px;
+                                                                            width: auto;
+                                                                            left: 500px;
+                                                                        }
+
+                                                                        #girlSits {
+                                                                            position: absolute;
+                                                                            width: 10%;
+                                                                            top: 220px;
+                                                                            left: 120px;
+                                                                        }
+
+                                                                        #boySits {
+                                                                            position: absolute;
+                                                                            width: 10%;
+                                                                            top: 220px;
+                                                                            right: 100px;
+                                                                        }
+
+                                                                        #grey {
+                                                                            position: absolute;
+                                                                            bottom: 100px;
+                                                                            left: 50%;
+                                                                            opacity: 0;
+                                                                        }
+
+                                                                        #ana {
+                                                                            position: absolute;
+                                                                            bottom: 80px;
+                                                                            left: -30%;
+                                                                        }
+
+                                                                        #book {
+                                                                            position: absolute;
+                                                                            bottom: 120px;
+                                                                            left: -40%;
+                                                                        }
+
+
+#anaKiss{
+    height:150px;
+    display:none;
+    top:50px;
+    position:absolute;
+
+
+}
+
+#greyKiss{
+      height:150px;
+    display:none;
+     position:absolute;
+
+
+}
+
+                                                                        #startText {
+                                                                            color: deeppink;
+                                                                            font-family: sans-serif;
+                                                                            font-size: 6em;
+                                                                            font-weight: 900;
+                                                                            width: 500px;
+                                                                            height: 100vh;
+                                                                            position: absolute;
+                                                                            opacity: 0;
+                                                                        }
+
+                                                                        #itBegan {
+                                                                            color: deeppink;
+                                                                            font-family: sans-serif;
+                                                                            font-size: 6em;
+                                                                            font-weight: 900;
+                                                                            width: 500px;
+                                                                            height: 100vh;
+                                                                            position: absolute;
+                                                                            opacity: 0;
+                                                                        }
+
+                                                                        .textSlideDown {
+                                                                            animation: textSlideDown 2s forwards;
+                                                                        }
+
+                                                                        @keyframes textSlideDown {
+                                                                            100% {
+                                                                                top: 50%;
+                                                                            }
+                                                                        }
+
+                                                                        .fadeText {
+                                                                            animation: fadeText 10s ease-out 2s forwards;
+                                                                        }
+
+                                                                        @keyframes fadeText {
+                                                                            0% {
+                                                                                opacity: 1;
+                                                                            }
+                                                                            10%,
+                                                                            20%,
+                                                                            30%,
+                                                                            50% {
+                                                                                opacity: 1;
+                                                                            }
+                                                                            100% {
+                                                                                opacity: 0
+                                                                            }
+                                                                        }
+
+                                                                        .anaEnters {
+                                                                            animation: anaEnters 2s ease-out forwards;
+                                                                        }
+
+                                                                        @keyframes anaEnters {
+                                                                            0% {
+                                                                                left: -30%;
+                                                                            }
+                                                                            100% {
+                                                                                left: 30%;
+                                                                            }
+                                                                        }
+
+                                                                        .bookDrop {
+                                                                            animation: bookDrop 0.8s forwards;
+                                                                        }
+
+                                                                        @keyframes bookDrop {
+                                                                            100% {
+                                                                                bottom: 80px;
+                                                                                left: 30%;
+                                                                            }
+                                                                            #backgroundBedroom {
+                                                                                background-image: url(images/redRoom.jpg) background-repeat: no-repeat;
+                                                                                background-position: center;
+                                                                                background-size: cover;
+                                                                                height: 100vh;
+                                                                                width: 100vw;
+                                                                                display: none;
+                                                                            }
+                                                                            #backgroundBathroom {
+                                                                                background-image: url(images/ShowerFINISHED.jpg) background-repeat: no-repeat;
+                                                                                background-position: center;
+                                                                                background-size: cover;
+                                                                                height: 100vh;
+                                                                                display: none;
+                                                                            }
