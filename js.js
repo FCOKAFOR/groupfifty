@@ -18,7 +18,7 @@ let background5 = document.querySelector("#background5");
 let background6 = document.querySelector("#background6");
 let background7 = document.querySelector("#background7");
 let backgroundBedroom = document.querySelector("#backgroundBedroom");
-let pressBedroomButton = document.querySelector("#bedroom");
+
 let backgroundBathroom = document.querySelector("#backgroundBathroom");
 let elevatorBell = document.querySelector("#elevatorBell");
 let door1 = document.querySelector("#door1");
@@ -27,6 +27,10 @@ let cat = document.querySelector("#cat");
 let greyBack = document.querySelector("#greyBack");
 let anaKiss= document.querySelector("#anaKiss");
 let greyKiss = document.querySelector("#greyKiss");
+let crowd = document.querySelector("#crowd");
+let crowdLaugh = document.querySelector("#crowdLaugh");
+let playAgainButton = document.querySelector(".playAgain");
+
 pressPlayButton.addEventListener("click", play);
 
 function play() {
@@ -161,11 +165,15 @@ function fullscreenElevator() {
     background3.style.display = "block";
  door1.style.display = "none";
      door2.style.display = "none";
+     crowd.style.display ="block";
 
     setTimeout(function () {
         console.log("elevator door opens a bit more");
         background3.style.display = "none";
         background4.style.display = "block";
+      crowd.style.display ="block";
+        crowdLaugh.play();
+
 
 
     }, 300);
@@ -176,6 +184,7 @@ function fullscreenElevator() {
         background5.style.display = "block";
     anaKiss.style.display = "block";
   greyKiss.style.display = "block";
+        playAgainButton.style.display = "block";
 
 
 
@@ -231,9 +240,28 @@ function bathroomClicked() {
 
     background5.style.display = "none";
     background7.style.display = "none";
-    background8.style.display = "none";
+
     backgroundBathroom.style.display = "block";
 
 
 
+}
+
+
+
+pressBedroomButton.addEventListener("click", bedroomClicked);
+
+function bedroomClicked() {
+    console.log ("bedroom has been clicked)");
+       background.style.display = "none";
+    background2.style.display = "none";
+    background6.style.display = "none";
+    background3.style.display = "none";
+    background4.style.display = "none";
+
+    background5.style.display = "none";
+    background7.style.display = "none";
+
+    backgroundBathroom.style.display = "none";
+    backgroundBedroom.style.display="block";
 }

@@ -2,7 +2,14 @@
                                                                             height: 100%;
                                                                             width: auto;
                                                                             margin: 0;
+                                                                                overflow:hidden;
                                                                         }
+
+#play {
+    color:deeppink;
+    font-size: 2em;
+    background-color: cadetblue;;
+}
 
                                                                         #background {
                                                                             background-image: url(images/OfficeFINISHED.png);
@@ -29,7 +36,7 @@
 
                                                                         #background3 {
                                                                             background-image: url(images/el1FINISHED.jpg);
-                                                                            background-color: lightgrey;
+                                                                            background-color: #83abcc;
                                                                             background-blend-mode: multiply;
                                                                             background-repeat: no-repeat;
                                                                             background-position: center;
@@ -42,7 +49,7 @@
 
                                                                         #background4 {
                                                                             background-image: url(images/el2FINISHED.jpg);
-                                                                            background-color: lightgrey;
+                                                                            background-color: #83abcc;
                                                                             background-blend-mode: multiply;
                                                                             background-repeat: no-repeat;
                                                                             background-position: center;
@@ -54,7 +61,7 @@
 
                                                                         #background5 {
                                                                             background-image: url(images/el3FINISHED.jpg);
-                                                                            background-color: lightgrey;
+                                                                            background-color: #83abcc;
                                                                             background-blend-mode: multiply;
                                                                             background-repeat: no-repeat;
                                                                             background-position: center;
@@ -107,6 +114,7 @@
 
                                                                         #background7 {
                                                                             background-image: url(images/insideElFINISHED.jpg);
+                                                                            background-color: #83abcc;
                                                                             background-blend-mode: multiply;
                                                                             background-repeat: no-repeat;
                                                                             background-position: center;
@@ -117,7 +125,7 @@
                                                                             position: absolute;
                                                                         }
 
-                                                                        elContainer {}
+
 
                                                                         #door1 {
                                                                             position: relative;
@@ -209,20 +217,41 @@
 
 
 #anaKiss{
-    height:150px;
+    height:300px;
     display:none;
-    top:50px;
+    bottom:200px;
     position:absolute;
+    left:40%;
 
 
 }
 
 #greyKiss{
-      height:150px;
+      height:300px;
     display:none;
      position:absolute;
+ bottom:220px;
+       right:40%;
+
+}
+
+#crowd{
+           height:350px;
+    display:none;
+     position:absolute;
+ bottom:0px;
+       right:10%;
+
+}
 
 
+.playAgain{
+    position: absolute;
+    top:10px;
+    color: white;
+    background-color: grey;
+    font-size: 2em;
+    display: none;
 }
 
                                                                         #startText {
@@ -298,14 +327,18 @@
                                                                                 bottom: 80px;
                                                                                 left: 30%;
                                                                             }
+
                                                                             #backgroundBedroom {
-                                                                                background-image: url(images/redRoom.jpg) background-repeat: no-repeat;
+                                                                                background-image: url(images/redRoom.jpg);
+                                                                                background-color: darkred;
+                                                                                background-repeat: no-repeat;
                                                                                 background-position: center;
                                                                                 background-size: cover;
                                                                                 height: 100vh;
                                                                                 width: 100vw;
                                                                                 display: none;
                                                                             }
+
                                                                             #backgroundBathroom {
                                                                                 background-image: url(images/ShowerFINISHED.jpg) background-repeat: no-repeat;
                                                                                 background-position: center;
