@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        #bath {
+            /*need another image*/
+            background-image: url(ShowerGOOD.png);
+            height: 100vh;
+            width: 100vw;
+        }
+
+        #bbl {
+            height: 600px;
+            width: 700px;
+            margin-left: 700px;
+        }
+
+        #ass {
+            height: auto;
+            width: 150px;
+            margin-left: 900px;
+            margin-top: -800px;
+            opacity: 0;
+        }
+
+        #steam {
+            height: auto;
+            width: 1900px;
+        }
+
+        .move {
+            animation: move 5s forwards;
+        }
+
+        @keyframes move {
+            100% {
+                transform: translateY(-600px);
+            }
+        }
+
+        .buttAppears {
+            animation: fading 2s ease forwards;
+        }
+
+        @keyframes fading {
+            100% {
+                opacity: 1;
+            }
+            0% {
+                opacity: 1;
+            }
+        }
+
+
+
+        @keyframes shake {
+            50% {
+                transform: rotate(45deg)
+            }
+            100% {
+                transform: rotate(-45deg);
+            }
+        }
+
+        .shake {
+            animation: shake 3s forwards;
+        }
+
+        .steamUp {
+            animation: moves 5s forwards;
+        }
+
+        @keyframes moves {
+            100% {
+                transform: translateY(-800px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="bath">
+        <img id="bbl" src="bubbles.png"> <img id=ass src="guzica.png"> <img id="steam" src="Asset%202.png">
+        <audio id="shower" preload="auto">
+            <source src="Having%20A%20Shower-SoundBible.com-1134591463.mp3"> </div>
+    <script>
+        let bbl = document.querySelector("#bbl");
+        let steam = document.querySelector("#steam");
+        let shower = document.querySelector("audio#shower");
+
+        function ready() {
+            shower.play();
+            bbl.classList.add("move");
+        }
+
+        function buttAppears() {
+            console.log("butt appears on glass");
+            ass.classList.add("buttAppears");
+            ass.addEventListener('animationend', shake);
+        }
+
+        function steamUp() {
+            console.log("steam");
+            steam.classList.add("steamUp");
+        }
+
+        function shake() {
+            console.log("shake butt");
+            ass.classList.remove("buttAppears");
+         ass.classList.add("shake");
+        }
+
+        bbl.addEventListener('animationend', buttAppears);
+
+        ass.addEventListener('animationend', steamUp);
+
+
+        ready();
+    </script>
+</body>
+
+</html>
