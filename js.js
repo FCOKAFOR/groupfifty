@@ -19,7 +19,7 @@ let background6 = document.querySelector("#background6");
 let background7 = document.querySelector("#background7");
 let backgroundBedroom = document.querySelector("#backgroundBedroom");
 
-let backgroundBathroom = document.querySelector("#backgroundBathroom");
+
 let elevatorBell = document.querySelector("#elevatorBell");
 let door1 = document.querySelector("#door1");
 let door2 = document.querySelector("#door2");
@@ -30,7 +30,7 @@ let greyKiss = document.querySelector("#greyKiss");
 let crowd = document.querySelector("#crowd");
 let crowdLaugh = document.querySelector("#crowdLaugh");
 let playAgainButton = document.querySelector(".playAgain");
-
+let playroom = document.querySelector("#playroom");
 pressPlayButton.addEventListener("click", play);
 
 function play() {
@@ -46,7 +46,7 @@ function play() {
         console.log("grey appears");
         grey.style.opacity = "1";
 
-    }, 8000);
+    }, 2000);
     setTimeout(function () {
         console.log("ana enters pauses");
         ana.classList.add("anaEnters");
@@ -54,7 +54,7 @@ function play() {
 
 
 
-    }, 8500);
+    }, 2500);
 }
 
 book.addEventListener("animationend", bookDrops);
@@ -216,23 +216,16 @@ function dinnerClicked() {
 
 
 
+let pressBedroomButton = document.querySelector("#bedroom");
 
-pressBedroomButton.addEventListener("click", bedroomClicked);
 
 function bedroomClicked() {
-    backgroundBedroom.style.display = "block";
+    console.log ("bedroom has been clicked");
 
-
-
-}
-
-
-let pressBathroomButton = document.querySelector("#bathroom");
-
-pressBathroomButton.addEventListener("click", bathroomClicked);
-
-function bathroomClicked() {
-    background.style.display = "none";
+     backgroundBedroom.style.display="block";
+ playroom.classList.add("fadeText");
+    monkMusic.play();
+      background.style.display = "none";
     background2.style.display = "none";
     background6.style.display = "none";
     background3.style.display = "none";
@@ -241,27 +234,9 @@ function bathroomClicked() {
     background5.style.display = "none";
     background7.style.display = "none";
 
-    backgroundBathroom.style.display = "block";
-
 
 
 }
-
-
 
 pressBedroomButton.addEventListener("click", bedroomClicked);
 
-function bedroomClicked() {
-    console.log ("bedroom has been clicked)");
-       background.style.display = "none";
-    background2.style.display = "none";
-    background6.style.display = "none";
-    background3.style.display = "none";
-    background4.style.display = "none";
-
-    background5.style.display = "none";
-    background7.style.display = "none";
-
-    backgroundBathroom.style.display = "none";
-    backgroundBedroom.style.display="block";
-}
