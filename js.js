@@ -35,19 +35,24 @@ let playroom = document.querySelector("#playroom");
 let anaEmbarrased = document.querySelector("#anaEmbarrased");
 let greyEmbarrased = document.querySelector("#greyEmbarrased");
 
+
+let maskYah = document.querySelector("#maskYah");
+let greyYes = document.querySelector("#yas");
+let dammIt = document.querySelector("#dammIt");
 let whip = document.querySelector("#whip");
 let mask = document.querySelector("#mask");
 let feather = document.querySelector("#feather");
 let pillow = document.querySelector("#pillow");
 
-let whip1 = document.querySelector("#whip1");
+let whipSound = document.querySelector("#whipSound");
+let pleaseWhip = document.querySelector("#pleaseWhip");
 let mask1 = document.querySelector("#mask1");
 let feather1 = document.querySelector("#feather1");
 let pillow1 = document.querySelector("#pillow1");
 let anaPlayroom= document.querySelector("#anaPlayroom");
 let greyPlayroom= document.querySelector("#greyPlayroom");
 let playroomText= document.querySelector("#playroomText");
-
+let anaFeather = document.querySelector("#anaFeather");
 let contract = document.querySelector("#contract");
     let bbl = document.querySelector("#bbl");
         let steam = document.querySelector("#steam");
@@ -90,7 +95,7 @@ function play() {
     setTimeout(function () {
         console.log("ana enters pauses");
         ana.classList.add("anaEnters");
-        book.classList.add("anaEnters");
+        book.classList.add("bookComeIn");
 
 
 
@@ -98,7 +103,7 @@ function play() {
     }, 2500);
 
 }
-book.classList.remove("anaEnters");
+
 book.addEventListener("animationend", bookDrops);
 
 
@@ -113,7 +118,7 @@ function bookDrops() {
         thudSound.play();
 
 
-    }, 500);
+    }, 200);
     setTimeout(function () {
         console.log("grey turns around");
 
@@ -329,6 +334,8 @@ console.log("back to options");
 
 
 
+
+
 let pressBedroomButton = document.querySelector("#bedroom");
 
 pressBedroomButton.addEventListener("click", bedroomClicked);
@@ -336,7 +343,7 @@ pressBedroomButton.addEventListener("click", bedroomClicked);
 
 function bedroomClicked() {
     console.log("bedroom has been clicked");
-  background.style.display = "none";
+    background.style.display = "none";
     background2.style.display = "none";
     background6.style.display = "none";
     background3.style.display = "none";
@@ -345,33 +352,31 @@ function bedroomClicked() {
     background5.style.display = "none";
     background7.style.display = "none";
     backgroundBedroom.style.display = "block";
-
     playroomText.classList.add("fadeText");
     monkMusic.play();
     console.log("whip pulses");
     whip.classList.add("sexToysPulse");
 
-        setTimeout(function () {
+    setTimeout(function () {
         console.log("feather pulse");
 
-         feather.classList.add("sexToysPulse");
-              playAgainButton.style.display = "block";
+        feather.classList.add("sexToysPulse");
 
 
 
     }, 300);
-           setTimeout(function () {
+    setTimeout(function () {
         console.log("feather pulse");
 
-         pillow.classList.add("sexToysPulse");
+        pillow.classList.add("sexToysPulse");
 
 
 
     }, 500);
-     setTimeout(function () {
+    setTimeout(function () {
         console.log("mask pulse");
 
-         mask.classList.add("sexToysPulse");
+        mask.classList.add("sexToysPulse");
 
 
 
@@ -382,100 +387,122 @@ function bedroomClicked() {
 mask.addEventListener("click", anaWearMask);
 
 function anaWearMask() {
-      console.log("ana wears the mask");
-    mask.style.display="none";
-    mask1.style.display="block";
+    console.log("ana wears the mask");
+    mask.style.display = "none";
+    mask1.style.display = "block";
+    anaPlayroom.classList.add("anaWiggle");
+    mask1.classList.add("anaWiggle");
+    maskYah.play();
+    monkMusic.pause();
+}
 
+maskYah.addEventListener("ended", greySpeak);
+
+function greySpeak() {
+    greyYes.play();
+    greyPlayroom.classList.add("iLikeThat");
+}
+
+greyYes.addEventListener("ended", remove);
+
+function remove() {
+    console.log("Now reset mask");
+    greyPlayroom.classList.remove("iLikeThat");
+    mask1.style.display = "none";
+    mask.style.display = "initial";
+    anaPlayroom.classList.remove("anaWiggle");
+    mask1.classList.remove("anaWiggle");
+    monkMusic.play();
 
 }
 
 
-mask1.addEventListener("click", anaRemovesMask);
-
-function anaRemovesMask() {
-      console.log("ana removes the mask");
-    mask1.style.display="none";
-    mask.style.display="block";
-
-
-}
 
 pillow.addEventListener("click", pillowFight);
 
 function pillowFight() {
-      console.log("pillow fight starts");
-    pillow.style.display="none";
-    pillow1.style.display="block";
-
-
+    console.log("pillow fight starts");
+    pillow.style.display = "none";
+    pillow1.style.display = "block";
+    dammIt.play();
+    pillow1.classList.add("pillowHit");
+    anaPlayroom.classList.add("anaPillowHit");
+    greyPlayroom.classList.add("greyPillowHit");
+    monkMusic.pause();
 }
 
-
-pillow1.addEventListener("click", pillowfightEnd);
+dammIt.addEventListener("ended", pillowfightEnd);
 
 function pillowfightEnd() {
-      console.log("pillow goes back");
-    pillow1.style.display="none";
-   pillow.style.display="block";
-
-
+    console.log("pillow goes back");
+    pillow1.classList.remove("pillowHit");
+    anaPlayroom.classList.remove("anaPillowHit");
+    greyPlayroom.classList.remove("greyPillowHit");
+    pillow1.style.display = "none";
+    pillow.style.display = "initial";
+    monkMusic.play();
 }
+
+
+
 feather.addEventListener("click", tickleAna);
 
 function tickleAna() {
-      console.log("tickle starts");
-  feather.style.display="none";
-  feather1.style.display="block";
-   anaPlayroom.classList.add("anaTickled");
+    console.log("tickle starts");
+    feather.style.display = "none";
+    feather1.style.display = "block";
+    feather1.classList.add("featherSwing");
+    anaPlayroom.classList.add("anaFeatherShake");
+    anaFeather.play();
+    monkMusic.pause();
+}
 
+anaPlayroom.addEventListener("animationend", featherDone);
 
+function featherDone() {
+    console.log("featherEnd");
+    feather1.classList.remove("featherSwing");
+    anaPlayroom.classList.remove("anaFeatherShake");
+    feather.style.display = "initial";
+    feather1.style.display = "none";
+    monkMusic.play();
 }
 
 
-feather1.addEventListener("click", tickleEnd);
-
-function tickleEnd() {
-      console.log("feather goes back");
-   feather1.style.display="none";
-  feather.style.display="block";
 
 
-}
+
+
+
 
 whip.addEventListener("click", whipAna);
 
 function whipAna() {
-      console.log("whipping starts");
-  whip.style.display="none";
-  whip1.style.display="block";
+    console.log("whipping starts");
+    whip.style.display = "none";
+    pleaseWhip.style.display = "block";
+    pleaseWhip.classList.add("whipIt");
+    monkMusic.pause();
+    whipSound.play();
 
 
 }
 
 
-whip1.addEventListener("click", whippingEnd);
+pleaseWhip.addEventListener("animationend", whippingEnd);
 
 function whippingEnd() {
-      console.log("whip goes back");
-  whip1.style.display="none";
-whip.style.display="block";
-
-
+    console.log("whip goes back");
+    monkMusic.play();
+    pleaseWhip.classList.remove("whipIt");
+    whip.style.display = "initial";
+    pleaseWhip.style.display = "none";
 }
 
-document.querySelector('#playAgain').addEventListener('click', playOptions);
-function playOptions(e){
- e.preventDefault()
-    background2.style.display = "block";
-    anaEmbarrased.style.display="none";
-    bath.style.display="none";
 
-    crowd.style.display="none";
-     greyEmbarrased.style.display="none";
-    anaKiss.style.display="none";
-    greyKiss.style.display="none";
 
-}
+
+
 
 
 let pressBathroomButton = document.querySelector("#bathroom");

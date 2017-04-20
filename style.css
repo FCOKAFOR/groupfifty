@@ -349,6 +349,7 @@ padding-top:350px;
   position : absolute;
   bottom   : 80px;
   left     : -30%;
+    height:300px;
 }
 
 #book {
@@ -492,15 +493,30 @@ padding-top:350px;
   }
 }
 
+.bookComeIn {
+    animation: bookComeIn 2s ease-out forwards;
+}
+
+@keyframes bookComeIn {
+    0% {
+        left: -30%;
+    }
+    100% {
+        left: 33%;
+    }
+}
 .bookDrop {
-  animation : bookDrop 0.8s forwards;
+    animation: bookDrop 0.2s forwards;
 }
 
 @keyframes bookDrop {
-  100% {
-    bottom : 80px;
-    left   : 30%;
-  }
+    0% {
+        left: 33%
+    }
+    100% {
+        left: 33%;
+        bottom: 80px;
+    }
 }
 
 #backgroundBedroom {
@@ -544,69 +560,228 @@ padding-top:350px;
 }
 
 #sexToys {
-    margin-left:25%;
+    margin-left:35%;
 }
-#mask{
-    height:70px;
-    width:100px;
+#mask {
+    height: 70px;
+    width: 100px;
 }
-#mask1{
-     height:70px;
-    position: absolute;
-    bottom:190px;
- display:none;
 
-    left:35%;
-}
-#pillow1 {
-
+#mask1 {
+    height: 70px;
     position: absolute;
-    bottom:120px;
-    left:45%;
+    bottom: 190px;
     display: none;
+    left: 33.5%;
+}
 
+#mask1:hover {
+    cursor: pointer;
+}
+
+#pillow1 {
+    position: absolute;
+    bottom: 120px;
+    top: 78vh;
+    left: 42%;
+    display: none;
+}
+
+#pillow1:hover {
+    cursor: pointer;
 }
 
 #feather1 {
-
+    width: 12vw;
     position: absolute;
-    bottom:120px;
-    left:45%;
-    display:none;
-
-}
-#whip1 {
-
-    position: absolute;
-    bottom:120px;
-    left:45%;
-    display:none;
-
+    bottom: 80px;
+    left: 41%;
+    display: none;
 }
 
+#feather1:hover {
+    cursor: pointer;
+}
+
+#pleaseWhip {
+    width: 7vw;
+    position: absolute;
+    bottom: 120px;
+    top: 67vh;
+    left: 44%;
+    display: none;
+}
+
+#pleaseWhip:hover {
+    cursor: pointer;
+}
 
 .sexToysPulse {
-	animation: pulse1 6s linear infinite;
-
+    animation: pulse1 6s linear infinite;
 }
+
 @keyframes pulse1 {
- 0% {
-
-   	transform: scale(1.1);
- }
- 50% {
-
-   	transform: scale(1);
- }
- 100% {
-
-
-   	transform: scale(1.1);
- }
-
+    0% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
 }
 
+.anaWiggle {
+    animation: anaWiggle 0.4s;
+}
 
+@keyframes anaWiggle {
+    0% {
+        transform: rotate(-30deg);
+    }
+    15% {
+        transform: rotate(30deg);
+    }
+    30% {
+        transform: rotate(-20deg);
+    }
+    45% {
+        transform: rotate(20deg);
+    }
+    60% {
+        transform: rotate(-10deg);
+    }
+    75% {
+        transform: rotate(10deg);
+    }
+    90% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(5deg);
+    }
+}
+
+.iLikeThat {
+    animation: iLikeThat 0.15s;
+}
+
+@keyframes iLikeThat {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2vh);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.pillowHit {
+    animation: pillowHit 0.2s 3;
+}
+
+@keyframes pillowHit {
+    0% {
+        transform: translate(0);
+    }
+    50% {
+        transform: translate(-3vw);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+.anaPillowHit {
+    animation: anaPillowHit 0.2s 3;
+}
+
+@keyframes anaPillowHit {
+    0% {
+        transform: translate(0);
+    }
+    50% {
+        transform: translate(3vw);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+.greyPillowHit {
+    animation: greyPillowHit 0.2s 3;
+}
+
+@keyframes greyPillowHit {
+    0% {
+        transform: translateY(-5vh);
+    }
+    35% {
+        transform: translateY(5vh);
+    }
+    65% {
+        transform: translateY(-7vh);
+    }
+    100% {
+        transform: translateY(7vh);
+    }
+}
+
+.featherSwing {
+    animation: featherSwing 0.8s 3;
+}
+
+@keyframes featherSwing {
+    100% {
+        transform: rotate(-40deg);
+        transform-origin: bottom right;
+    }
+}
+
+.anaFeatherShake {
+    animation: anaFeatherShake 0.8s 3;
+}
+
+@keyframes anaFeatherShake {
+    0% {
+        transform: rotate(-30deg);
+    }
+    15% {
+        transform: rotate(30deg);
+    }
+    30% {
+        transform: rotate(-20deg);
+    }
+    45% {
+        transform: rotate(20deg);
+    }
+    60% {
+        transform: rotate(-10deg);
+    }
+    75% {
+        transform: rotate(10deg);
+    }
+    90% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(5deg);
+    }
+}
+
+.whipIt {
+    animation: whipIt 1s;
+}
+
+@keyframes whipIt {
+    100% {
+        transform: rotate(-30deg);
+        transform-origin: bottom right;
+    }
+}
 
 /*#contract{
     margin-left: 590px;
@@ -642,8 +817,7 @@ svg {
 #Layer_1{
     opacity: 0;
     margin-left: 700px;
-    fill:black;
-    stroke-width:5;
+
 
 }
 
