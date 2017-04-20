@@ -56,8 +56,9 @@ let anaFeather = document.querySelector("#anaFeather");
 let contract = document.querySelector("#contract");
     let bbl = document.querySelector("#bbl");
         let steam = document.querySelector("#steam");
-        let showerSound = document.querySelector("audio#shower");
+        let showerSound = document.querySelector("#showerSound");
         let dinnerSound = document.querySelector("#dinnerSound");
+        let ohYeah = document.querySelector("#ohYeah");
 
 
 
@@ -80,6 +81,7 @@ function play() {
     background5.style.display = "none";
     background6.style.display = "none";
     firstPage.style.display = "none";
+
 
     background.style.display = "block";
 
@@ -267,7 +269,7 @@ function fullscreenElevator() {
 
 }
 
-document.querySelector('#playAgain').addEventListener('click', playOptions);
+/*document.querySelector('#playAgain').addEventListener('click', playOptions);
 function playOptions(e){
  e.preventDefault()
     background2.style.display = "block";
@@ -322,7 +324,7 @@ Layer_1.style.opacity="1"}, 500);
 
 }
 
-document.querySelector('#playAgain').addEventListener('click', playOptions);
+/*document.querySelector('#playAgain').addEventListener('click', playOptions);
 
 function playOptions(){
 console.log("back to options");
@@ -336,7 +338,7 @@ console.log("back to options");
 
 
 
-
+*/
 
 
 
@@ -488,8 +490,14 @@ function whipAna() {
     pleaseWhip.classList.add("whipIt");
     monkMusic.pause();
     whipSound.play();
+       setTimeout(function () {
+        console.log("oh yeah");
+
+       ohYeah.play();
 
 
+
+    }, 1000);
 }
 
 
