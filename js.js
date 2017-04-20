@@ -57,6 +57,7 @@ let contract = document.querySelector("#contract");
     let bbl = document.querySelector("#bbl");
         let steam = document.querySelector("#steam");
         let showerSound = document.querySelector("audio#shower");
+        let dinnerSound = document.querySelector("#dinnerSound");
 
 
 
@@ -65,7 +66,7 @@ let contract = document.querySelector("#contract");
 text.addEventListener("click", fadein);
 function fadein (){
 text.classList.add("fadein");
-    playAgainButton.style.zIndex="0";
+
 }
 
 text.addEventListener("click", play);
@@ -228,6 +229,7 @@ function fullscreenElevator() {
         background4.style.display = "block";
         crowd.style.display = "block";
         crowdLaugh.play();
+        crowdLaugh.currentTime= 5;
 
 
 
@@ -239,7 +241,7 @@ function fullscreenElevator() {
         background5.style.display = "block";
         anaKiss.style.display = "block";
         greyKiss.style.display = "block";
-        playAgainButton.style.display = "block";
+
 
 
 
@@ -247,7 +249,7 @@ function fullscreenElevator() {
     }, 300);
 
     setTimeout(function () {
-        console.log("elevator door opens ");
+        console.log("elevator door opens more ");
         background4.style.display = "none";
         background5.style.display = "block";
         anaKiss.style.display = "none";
@@ -255,8 +257,8 @@ function fullscreenElevator() {
 
         anaEmbarrased.style.display = "block";
         greyEmbarrased.style.display = "block";
-        playAgainButton.style.display = "block";
 
+  playAgainButton.style.display = "initial";
 
 
 
@@ -294,6 +296,7 @@ pressDinnerButton.addEventListener("click", dinnerClicked);
 
 function dinnerClicked() {
     console.log("dinner selected");
+   dinnerSound.play();
     background.style.display = "none";
     background2.style.display = "none";
     background3.style.display = "none";
@@ -314,12 +317,13 @@ contract.addEventListener("animationend", fadein);
 function fadein (){
 setTimeout(function () {
 Layer_1.style.opacity="1"}, 500);
-
+   dinnerSound.pause();
 
 
 }
 
 document.querySelector('#playAgain').addEventListener('click', playOptions);
+
 function playOptions(){
 console.log("back to options");
     background2.style.display = "block";
@@ -526,7 +530,7 @@ function bathroomClicked() {
    door2.style.display = "none";
 
     playAgainButton.style.display="block";
-    shower.play();
+    showerSound.play();
      bbl.classList.add("move");
     console.log("shower sound plays");
 
@@ -548,5 +552,9 @@ function bathroomClicked() {
 
 
         }
+steam.addEventListener("animationend", stopPlay)
+function stopPlay (){
+    showerSound.pause();
+}
 
 
