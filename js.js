@@ -46,12 +46,14 @@ let feather1 = document.querySelector("#feather1");
 let pillow1 = document.querySelector("#pillow1");
 let anaPlayroom= document.querySelector("#anaPlayroom");
 let greyPlayroom= document.querySelector("#greyPlayroom");
-
+let playroomText= document.querySelector("#playroomText");
 
 let contract = document.querySelector("#contract");
     let bbl = document.querySelector("#bbl");
         let steam = document.querySelector("#steam");
         let shower = document.querySelector("audio#shower");
+
+
 
 pressPlayButton.addEventListener("click", play);
 
@@ -66,6 +68,7 @@ function play() {
     monkMusic.play();
     startText.classList.add("fadeText");
     pressPlayButton.style.display = "none";
+
 
     setTimeout(function () {
         console.log("grey appears");
@@ -269,19 +272,26 @@ function dinnerClicked() {
     bath.style.display = "none";
     door1.style.display = "none";
     door2.style.display = "none";
-
+ playAgainButton.style.display = "block";
     background6.style.display = "block";
 
 
 }
 
 contract.addEventListener("animationend", fadein);
+
 function fadein (){
 setTimeout(function () {
 Layer_1.style.opacity="1";}, 500);
-    playAgainButton.style.display = "block";
+
+
 
 }
+
+
+
+
+
 
 
 let pressBedroomButton = document.querySelector("#bedroom");
@@ -300,7 +310,8 @@ function bedroomClicked() {
     background5.style.display = "none";
     background7.style.display = "none";
     backgroundBedroom.style.display = "block";
-    playroom.classList.add("fadeText");
+
+    playroomText.classList.add("fadeText");
     monkMusic.play();
     console.log("whip pulses");
     whip.classList.add("sexToysPulse");
@@ -309,6 +320,7 @@ function bedroomClicked() {
         console.log("feather pulse");
 
          feather.classList.add("sexToysPulse");
+              playAgainButton.style.display = "block";
 
 
 
@@ -440,6 +452,7 @@ function bathroomClicked() {
    door1.style.display = "none";
    door2.style.display = "none";
  bath.style.display = "block";
+    playAgainButton.style.display="block";
     shower.play();
      bbl.classList.add("move");
     console.log("shower sound plays");
@@ -459,4 +472,6 @@ function bathroomClicked() {
         function steamUp() {
             console.log("steam");
             steam.classList.add("steamUp");
+
+
         }
