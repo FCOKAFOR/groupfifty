@@ -313,9 +313,14 @@ padding-top:350px;
   position : absolute;
   right    : 10%;
   bottom   : 0px;
+   padding:0;
+    height:30px;
 
 
 }
+
+
+
 
 #anaEmbarrased  {
   display  : none;
@@ -541,4 +546,121 @@ padding-top:350px;
 }
 
 
+#contract{
+    margin-left: 590px;
+    animation: fadein 9s forwards;
 
+
+}
+
+@keyframes fadein {
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+
+#Layer_1{
+    opacity: 0;
+    margin-left: 700px;
+}
+
+#bath {
+            /*need another image*/
+            background-image: url(images/ShowerFINISHED.jpg);
+            height: 100vh;
+            width: 100vw;
+    position:relative;
+        }
+
+        #bbl {
+            position:relative;
+            height: 600px;
+            width: 700px;
+            margin-left: 700px;
+        }
+
+        #ass {
+            height: auto;
+            width: 150px;
+            position: absolute;
+            right: 20vw;
+         bottom:15vh;
+            opacity: 0;
+        }
+
+        #steam {
+            height: auto;
+            width: 1900px;
+        }
+
+        .move {
+            animation: move 5s forwards;
+        }
+
+        @keyframes move {
+            100% {
+                transform: translateY(-600px);
+            }
+        }
+
+
+
+
+
+        .shake {
+            animation: shake 2s forwards;
+        }
+
+        @keyframes shake {
+            10% {
+                opacity: 0.5;
+            }
+            20% {
+                transform: translateY(-20px);
+                opacity: 0.5;
+            }
+             40% {
+                transform: translateY(20px);
+                 opacity: 0.5;
+            }
+             60% {
+                transform: translateY(-20px);
+                 opacity: 0.5;
+            }
+             80% {
+                transform: translateY(20px);
+                 opacity: 0.5;
+            }
+             100% {
+                transform: translateY(-20px);
+            }
+
+        }
+.steamUp {
+            animation: moves 5s forwards;
+        }
+
+        @keyframes moves {
+            100% {
+                transform: translateY(-800px);
+            }
+        }
+
+        div{
+            overflow: hidden;
+        }
+
+#steamyText {
+  position:absolute;
+    color:cadetblue;
+    font-size: 5em;
+    font-family: sans-serif;
+    font-weight: 900;
+     width       : 500px;
+
+    opacity:1;
+}

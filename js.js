@@ -48,8 +48,10 @@ let anaPlayroom= document.querySelector("#anaPlayroom");
 let greyPlayroom= document.querySelector("#greyPlayroom");
 
 
-
-
+let contract = document.querySelector("#contract");
+    let bbl = document.querySelector("#bbl");
+        let steam = document.querySelector("#steam");
+        let shower = document.querySelector("audio#shower");
 
 pressPlayButton.addEventListener("click", play);
 
@@ -199,6 +201,7 @@ function fullscreenElevator() {
     door2.style.display = "none";
     crowd.style.display = "block";
 
+
     setTimeout(function () {
         console.log("elevator door opens a bit more");
         background3.style.display = "none";
@@ -241,6 +244,13 @@ function fullscreenElevator() {
 
 }
 
+document.querySelector('.playAgain').addEventListener('click', playOptions);
+function playOptions(e){
+    e.preventDefault()
+    background2.style.display = "block";
+    anaEmbarrased.style.display="none";
+     greyEmbarrased.style.display="none";
+}
 
 
 let pressDinnerButton =
@@ -256,6 +266,7 @@ function dinnerClicked() {
     background4.style.display = "none";
     background5.style.display = "none";
     background7.style.display = "none";
+    bath.style.display = "none";
     door1.style.display = "none";
     door2.style.display = "none";
 
@@ -264,7 +275,13 @@ function dinnerClicked() {
 
 }
 
+contract.addEventListener("animationend", fadein);
+function fadein (){
+setTimeout(function () {
+Layer_1.style.opacity="1";}, 500);
+    playAgainButton.style.display = "block";
 
+}
 
 
 let pressBedroomButton = document.querySelector("#bedroom");
@@ -404,5 +421,42 @@ whip.style.display="block";
 
 
 
+let pressBathroomButton = document.querySelector("#bathroom");
+
+pressBathroomButton.addEventListener("click", bathroomClicked);
 
 
+function bathroomClicked() {
+    console.log("bathroom has been clicked");
+  background.style.display = "none";
+    background2.style.display = "none";
+    background6.style.display = "none";
+    background3.style.display = "none";
+    background4.style.display = "none";
+
+    background5.style.display = "none";
+    background7.style.display = "none";
+    backgroundBedroom.style.display = "none";
+   door1.style.display = "none";
+   door2.style.display = "none";
+ bath.style.display = "block";
+    shower.play();
+     bbl.classList.add("move");
+    console.log("shower sound plays");
+
+            bbl.addEventListener('animationend', shake);
+}
+
+
+
+
+        function shake() {
+            console.log("shake butt");
+            ass.classList.add("shake");
+            ass.addEventListener('animationend', steamUp);
+        }
+
+        function steamUp() {
+            console.log("steam");
+            steam.classList.add("steamUp");
+        }
