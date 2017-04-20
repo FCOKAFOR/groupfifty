@@ -2,14 +2,55 @@ body {
   width    : auto;
   height   : 100%;
   margin   : 0;
-
+overflow:hidden;
 }
 
-#play {
-  color            : deeppink;
-  background-color : cadetblue;
-  font-size        : 2em;
-}
+
+
+
+#firstPage {
+
+    background-image: url(images/tie.jpg);
+    background-repeat: no-repeat;
+    background-color:#e45d49;
+     background-blend-mode : multiply;
+  background-repeat   : no-repeat;
+    height:100vh;
+    }
+
+#text{
+    font-size: 5em;
+    cursor: pointer;
+    font-family: sans-serif;
+    animation: 6s fadein forwards;
+    }
+    @keyframes fadein{
+        0%{
+            opacity: 0;
+        }
+        25%{
+            opacity: 0.25;
+
+        }
+        50%{
+            opacity: 0.5;
+
+        }
+        75%{
+            opacity: 0.75;
+
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+
+    h1{
+        margin-left: 850px;
+        margin-top: 300px;
+        color:#4FC0AA;
+    }
+
 
 #background {
   height                : 100vh;
@@ -46,26 +87,45 @@ font-weight: 900;
   height: 300px;
   width: 300px;
   border-radius: 50%;
-  border: 1px solid red;
+  border: 1px solid ;
 
 }
-
 #dinner {
-
+background-color: cadetblue;
+    color: grey;
+    font-size: 2em;
+font-weight: 900;
   height: 300px;
   width: 300px;
   border-radius: 50%;
-  border: 1px solid red;
+  border: 1px solid ;
 
 }
 
 #bedroom {
-
-
+background-color: cadetblue;
+    color: grey;
+    font-size: 2em;
+font-weight: 900;
   height: 300px;
   width: 300px;
   border-radius: 50%;
-  border: 1px solid red;
+  border: 1px solid ;
+
+}
+
+
+#bathroom {
+
+
+background-color: cadetblue;
+    color: grey;
+    font-size: 2em;
+font-weight: 900;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  border: 1px solid ;
 
 }
 #bathroom {
@@ -74,7 +134,7 @@ font-weight: 900;
   height: 300px;
   width: 300px;
   border-radius: 50%;
-  border: 1px solid red;
+  border: 1px solid ;
 
 }
 
@@ -329,7 +389,7 @@ padding-top:350px;
   right    : 10%;
   bottom   : 0px;
    padding:0;
-    height:30px;
+    height:300px;
 
 
 }
@@ -354,13 +414,15 @@ padding-top:350px;
   height   : 300px;
 }
 
-.playAgain {
- display: none;
+#playAgain {
+
   position   : absolute;
   top        : 10px;
   color      : cadetblue;
   background : none;
   font-size  : 2em;
+    z-index:100;
+
 }
 
 #startText {
@@ -456,17 +518,6 @@ padding-top:350px;
     display:none;
 }
 
-#playroom {
-
-    position    : absolute;
-  width       : 500px;
-  height      : 100vh;
-  color       : white;
-
-  font-family : sans-serif;
-  font-size   : 6em;
-  font-weight : 900;
-}
 
 #playroomText {
        position    : absolute;
@@ -555,21 +606,6 @@ padding-top:350px;
 
 }
 
-.anaTickled {
-    {
-    animation: anaTickled 0.1s linear 4;
-}
-}
-
-@keyframes anaTickled {
-    0%, 100% {
-        margin-left: -1%;
-    }
-
-    50% {
-        margin-left:1%;
-    }
-}
 
 
 /*#contract{
@@ -705,7 +741,7 @@ svg {
 
 #steamyText {
   position:absolute;
-    color:cadetblue;
+    color:deeppink;
     font-size: 5em;
     font-family: sans-serif;
     font-weight: 900;

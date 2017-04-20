@@ -1,7 +1,7 @@
 let pressPlayButton = document.querySelector("#play");
+let firstPage =document.querySelector("#firstPage");
 
-
-
+let text=document.querySelector("#text");
 let ana = document.querySelector("#ana");
 let grey = document.querySelector("#grey");
 let startText = document.querySelector("#startText");
@@ -30,7 +30,7 @@ let anaKiss = document.querySelector("#anaKiss");
 let greyKiss = document.querySelector("#greyKiss");
 let crowd = document.querySelector("#crowd");
 let crowdLaugh = document.querySelector("#crowdLaugh");
-let playAgainButton = document.querySelector(".playAgain");
+let playAgainButton = document.querySelector("#playAgain");
 let playroom = document.querySelector("#playroom");
 let anaEmbarrased = document.querySelector("#anaEmbarrased");
 let greyEmbarrased = document.querySelector("#greyEmbarrased");
@@ -51,11 +51,20 @@ let playroomText= document.querySelector("#playroomText");
 let contract = document.querySelector("#contract");
     let bbl = document.querySelector("#bbl");
         let steam = document.querySelector("#steam");
-        let shower = document.querySelector("audio#shower");
+        let showerSound = document.querySelector("audio#shower");
 
 
 
-pressPlayButton.addEventListener("click", play);
+
+
+text.addEventListener("click", fadein);
+function fadein (){
+text.classList.add("fadein");
+    playAgainButton.style.zIndex="0";
+}
+
+text.addEventListener("click", play);
+
 
 
 
@@ -64,10 +73,13 @@ function play() {
     background4.style.display = "none";
     background5.style.display = "none";
     background6.style.display = "none";
+    firstPage.style.display = "none";
+
+    background.style.display = "block";
 
     monkMusic.play();
     startText.classList.add("fadeText");
-    pressPlayButton.style.display = "none";
+
 
 
     setTimeout(function () {
@@ -243,19 +255,33 @@ function fullscreenElevator() {
 
 
 
+
     }, 1000);
 
 }
 
-document.querySelector('.playAgain').addEventListener('click', playOptions);
+document.querySelector('#playAgain').addEventListener('click', playOptions);
 function playOptions(e){
+ e.preventDefault()
+    background2.style.display = "block";
+    anaEmbarrased.style.display="none";
+    bath.style.display="none";
+
+    crowd.style.display="none";
+     greyEmbarrased.style.display="none";
+    anaKiss.style.display="none";
+    greyKiss.style.display="none";
+
+}
+/*function playOptions(e){
     e.preventDefault()
     background2.style.display = "block";
     anaEmbarrased.style.display="none";
+    bath.style.display="none";
+    crowd.style.display="none";
      greyEmbarrased.style.display="none";
 }
-
-
+*/
 let pressDinnerButton =
     document.querySelector("#dinner");
 
@@ -282,13 +308,22 @@ contract.addEventListener("animationend", fadein);
 
 function fadein (){
 setTimeout(function () {
-Layer_1.style.opacity="1";}, 500);
+Layer_1.style.opacity="1"}, 500);
 
 
 
 }
 
-
+document.querySelector('#playAgain').addEventListener('click', playOptions);
+function playOptions(){
+console.log("back to options");
+    background2.style.display = "block";
+    anaEmbarrased.style.display="none";
+    background6.style.display="none";
+    bath.style.display="none";
+    crowd.style.display="none";
+     greyEmbarrased.style.display="none";
+}
 
 
 
@@ -428,9 +463,19 @@ whip.style.display="block";
 
 }
 
+document.querySelector('#playAgain').addEventListener('click', playOptions);
+function playOptions(e){
+ e.preventDefault()
+    background2.style.display = "block";
+    anaEmbarrased.style.display="none";
+    bath.style.display="none";
 
+    crowd.style.display="none";
+     greyEmbarrased.style.display="none";
+    anaKiss.style.display="none";
+    greyKiss.style.display="none";
 
-
+}
 
 
 let pressBathroomButton = document.querySelector("#bathroom");
@@ -440,6 +485,7 @@ pressBathroomButton.addEventListener("click", bathroomClicked);
 
 function bathroomClicked() {
     console.log("bathroom has been clicked");
+     bath.style.display = "block";
   background.style.display = "none";
     background2.style.display = "none";
     background6.style.display = "none";
@@ -451,7 +497,7 @@ function bathroomClicked() {
     backgroundBedroom.style.display = "none";
    door1.style.display = "none";
    door2.style.display = "none";
- bath.style.display = "block";
+
     playAgainButton.style.display="block";
     shower.play();
      bbl.classList.add("move");
@@ -475,3 +521,5 @@ function bathroomClicked() {
 
 
         }
+
+
